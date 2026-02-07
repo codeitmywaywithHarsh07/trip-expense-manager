@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-general: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-clash: 'Outfit', system-ui, sans-serif;
+  --color-brand-coral: #FF6B6B;
+  --color-brand-peach: #FFD93D;
+  --color-brand-mint: #6BCF7F;
+  --color-brand-sky: #4ECDC4;
+  --color-brand-lavender: #A18AFF;
+  --layout-bg: #EBE7DC;
+  --color-brand-purple: #CDA4E8;
+  --color-brand-orange: #F19565;
+  --color-brand-green: #9BCBAB;
+  --color-brand-indigo: #8991FE;
+  --color-brand-orange-light: #FFC6A8;
+  --color-brand-blue: #485ff0;
+  --color-blue-tile:#a0c6ff;
+  --color-brand-dark: #232323;
+  --color-brand-red: #F24646;
+  --color-brand-light: #EEEDEA;
+  --color-black-text:#0d101b;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-general);
+  overscroll-behavior: none;
+  touch-action: pan-x pan-y;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom gradient backgrounds */
+.gradient-coral {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+}
+
+.gradient-mint {
+  background: linear-gradient(135deg, #6BCF7F 0%, #4ECDC4 100%);
+}
+
+.gradient-lavender {
+  background: linear-gradient(135deg, #A18AFF 0%, #FF6B9D 100%);
+}
+
+.gradient-peach {
+  background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transitions */
+@layer utilities {
+  .transition-all-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .font-jakarta {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-jakarta-light {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .font-jakarta-regular {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-jakarta-medium {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .font-jakarta-semibold {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .font-jakarta-bold {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .font-jakarta-extrabold {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .font-jakarta-black {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .font-jakarta-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .font-jakarta-light-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .font-jakarta-regular-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .font-jakarta-medium-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .font-jakarta-semibold-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .font-jakarta-bold-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .font-jakarta-extrabold-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  .font-jakarta-black-italic {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+}
+
+/* Input focus states */
+input:focus, 
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Prevent iOS zoom on input focus */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Custom checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #6BCF7F 0%, #4ECDC4 100%);
+  border-color: #6BCF7F;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Ripple effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Animations from tailwind.config.mjs */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation utility classes */
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.animate-bounce-subtle {
+  animation: bounceSubtle 0.5s ease-out;
+}
