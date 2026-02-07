@@ -2,9 +2,9 @@ import React from 'react';
 
 const Avatar = ({ 
   name = "User", 
-  image = null, 
+  image = null as string | null | undefined, 
   color = "#3b82f6", 
-  size = "md",
+  size = "md" as "xs" | "sm" | "md" | "lg" | "xl" | "2xl",
   showOnlineStatus = false,
   className = ""
 }) => {
