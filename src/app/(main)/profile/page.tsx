@@ -20,7 +20,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="min-h-dvh  pb-8">
+    <div className="h-full">
       <ProfileSection userData={userData} />
     </div>
   );

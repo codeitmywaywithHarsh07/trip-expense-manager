@@ -7,6 +7,7 @@ import {
   ChartNoAxesCombined,
   ChevronRight,
   Frown,
+  Map,
   Search,
   Smile,
   Users,
@@ -18,60 +19,72 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className=" py-4 h-full">
+    <div className="h-full">
       {/* Top Header */}
+      <div className="flex items-center justify-between py-4 px-3">
+        <div className="flex gap-3 items-center">
+          <Avatar
+            name="John Doe"
+            size="md"
+            image={
+              "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+            }
+          />
 
-      <div className="px-3 h-full">
-        <div className="flex items-center justify-between">
-          <div className="flex gap-3 items-center">
-            <Avatar
-              name="John Doe"
-              size="md"
-              image={
-                "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
-              }
-            />
-
-            <div className="flex flex-col gap-0.5 text-(--color-brand-dark)">
-              <p className="text-sm font-jakarta-semibold">Hello, Harsh</p>
-              <p className="text-xs font-jakarta-regular">Welcome to TripPay</p>
-            </div>
+          <div className="flex flex-col gap-0.5 text-(--color-brand-dark)">
+            <p className="text-base font-jakarta-semibold">Hello, Harsh</p>
+            <p className="text-xs font-jakarta-regular">Welcome to TripPay</p>
           </div>
-
-          <button className="border border-(--color-brand-dark)/10 rounded-full w-12 h-12 flex items-center justify-center">
-            <Search className="w-6 h-6 text-(--color-brand-dark)" />
-          </button>
         </div>
 
-        <div className="bg-(--color-brand-dark) flex flex-col gap-2 rounded-3xl w-full h-auto mt-8 px-4 py-3">
-          <p className="text-sm font-jakarta-regular text-(--color-brand-light)">
-            Today {formatToShortDate(new Date())}.
+        <button className="border border-(--color-brand-dark)/10 rounded-full w-12 h-12 flex items-center justify-center">
+          <Search className="w-6 h-6 text-(--color-brand-dark)" />
+        </button>
+      </div>
+
+      <div className="px-3 h-full">
+        <div className="bg-(--color-brand-dark) flex flex-col gap-2 rounded-3xl w-full h-auto mt-4 px-4 py-3">
+          <div className="flex flex-col gap-2">
+            <p className="text-sm font-jakarta-regular text-(--color-brand-light)/70">
+            {/* Today {formatToShortDate(new Date())}. */}
+            Total Spends
           </p>
-          <p className="text-(--layout-bg) text-xl font-jakarta-semibold-italic">
-            Hello Harsh! How are you feeling today?
+          <p className="text-(--layout-color) text-3xl font-jakarta-semibold">
+            ₹ 12,500.<span className="text-(--primary-color-2)/70">40</span>
           </p>
-          <div className="mt-4 flex gap-2 items-center justify-between max-[350px]:gap-1 max-[350px]:text-[10px] text-xs">
-            <button className="bg-(--layout-bg) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
-              Happy{" "}
-              <Smile className="absolute -top-3.5 -right-1 w-5 h-5 ml-1 text-(--color-brand-green)" />
-            </button>
-            <button className="bg-(--layout-bg) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
-              Angry{" "}
-              <Angry className="absolute -top-3.5 -right-1 w-5 h-5 ml-1 text-(--color-brand-red)" />
-            </button>
-            <button className="bg-(--layout-bg) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
-              Sleepy{" "}
-              <Annoyed className="absolute -top-3.5 -right-1 w-5 h-5 ml-1 text-(--color-brand-peach)" />
-            </button>
-            <button className="bg-(--layout-bg) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
-              Bored{" "}
-              <Frown className="absolute -top-3.5 -right-1 w-5 h-5 ml-1 text-(--color-brand-orange)" />
-            </button>
           </div>
+
+          <div className="flex gap-2 items-center">
+            <Map className="w-4 h-4 text-(--color-brand-light)/70" />
+            <p className="text-sm font-jakarta-regular text-(--layout-color)">
+              3 trips
+            </p>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <Users className="w-4 h-4 text-(--color-brand-light)/70" />
+            <p className="text-sm font-jakarta-regular text-(--layout-color)">
+              8 friends
+            </p>
+          </div>
+          {/* <div className="mt-4 flex gap-2 items-center justify-between max-[350px]:gap-1 max-[350px]:text-[10px] text-xs">
+            <button className="bg-(--layout-color) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
+              Happy{" "}
+            </button>
+            <button className="bg-(--layout-color) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
+              Angry{" "}
+            </button>
+            <button className="bg-(--layout-color) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
+              Sleepy{" "}
+            </button>
+            <button className="bg-(--layout-color) text-(--color-brand-dark) px-4 py-2 rounded-full font-jakarta-medium relative overflow-visibletransition-all active:scale-[0.98]">
+              Bored{" "}
+            </button>
+          </div> */}
         </div>
 
         <div className="flex justify-between items-center mt-2  gap-2">
-          <div className="rounded-3xl bg-(--color-brand-green) h-auto w-1/2 px-3 py-4">
+          <div className="rounded-3xl bg-(--primary-color) border border-(--border-light) h-auto w-1/2 px-3 py-4">
             <p className="font-jakarta-medium text-sm flex items-center text-(--color-brand-dark)">
               {" "}
               <ChartNoAxesCombined className="inline w-4 h-4 mr-1" />
@@ -81,7 +94,7 @@ const Dashboard = () => {
               ₹ 12,500{" "}
             </p>
           </div>
-          <div className="rounded-3xl bg-(--color-brand-orange) h-auto w-1/2 px-3 py-4">
+          <div className="rounded-3xl bg-(--secondary-color) border border-(--border-light) h-auto w-1/2 px-3 py-4">
             <p className="font-jakarta-medium text-sm flex items-center text-(--color-brand-dark)">
               {" "}
               <ChartNoAxesCombined className="inline w-4 h-4 mr-1" />
@@ -94,7 +107,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-3 py-3 sticky top-0 bg-(--layout-bg) z-30 px-3">
+      <div className="flex justify-between items-center mt-3 py-3 sticky top-0 bg-(--layout-color) z-30 px-3">
         <p className="text-xl font-jakarta-semibold text-(--color-brand-dark)">
           Your Trips
         </p>
@@ -113,7 +126,7 @@ const Dashboard = () => {
           <Link
             href={`/trips/${trip.id}`}
             key={trip.id}
-            className="relative flex items-end justify-between rounded-2xl shadow-lg mt-3 overflow-hidden h-96 border-[0.5px] border-(--color-brand-dark)/10"
+            className="relative flex items-end justify-between rounded-2xl shadow-lg mt-3 overflow-hidden h-80  border-[0.5px] border-(--border-light)"
           >
             {/* Image */}
             <img
@@ -123,7 +136,9 @@ const Dashboard = () => {
             />
 
             {/* Status Badge */}
-            <p className="absolute top-2 right-2 w-fit py-1 px-2 bg-(--color-brand-dark) text-white text-xs rounded-full font-jakarta-regular">{trip?.status}</p>
+            <p className="absolute top-2 right-2 w-fit py-1 px-2 bg-(--color-brand-dark) text-white text-xs rounded-full font-jakarta-regular">
+              {trip?.status}
+            </p>
 
             {/* Gradient Overlay */}
             {/* <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" /> */}

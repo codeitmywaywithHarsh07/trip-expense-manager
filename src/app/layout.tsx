@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#EBE7DC",
+  themeColor: "#f7f6ee",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -33,7 +33,7 @@ export default function RootLayout({
           url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
         </style>
       </head>
-      <body className="bg-(--layout-bg) min-h-screen">
+      <body className="bg-(--layout-color) min-h-screen">
         {children}
         <InstallPWA />
       </body>

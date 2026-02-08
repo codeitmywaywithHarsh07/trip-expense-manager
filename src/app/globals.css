@@ -9,7 +9,7 @@
   --color-brand-mint: #6BCF7F;
   --color-brand-sky: #4ECDC4;
   --color-brand-lavender: #A18AFF;
-  --layout-bg: #EBE7DC;
+  --layout-bg: #eceef0;
   --color-brand-purple: #CDA4E8;
   --color-brand-orange: #F19565;
   --color-brand-green: #9BCBAB;
@@ -21,6 +21,22 @@
   --color-brand-red: #F24646;
   --color-brand-light: #EEEDEA;
   --color-black-text:#0d101b;
+
+  /* Main App v2 */
+
+  --layout-color: #f7f6ee;
+  --primary-color-2: #b8d8c9;
+  --primary-color: #acd1c0;
+  --primary-color-dark: #8ac5a8;
+  --secondary-color: #dbd4b7;
+  --secondary-color-2: #edebda;
+  --secondary-color-light: #efebd8;
+  --green-dark: #1a434e;
+  --gold-color: #e9d972;
+  --primary-black: #211f1f;
+
+  /* Borders */
+  --border-light: rgba(35, 35, 35, 0.2);
 }
 
 * {

@@ -27,7 +27,7 @@ export function BottomNav() {
     //   supports-backdrop-filter:bg-white/10
     // "
     // >
-    <div className="bg-(--color-brand-dark) rounded-full fixed bottom-8 left-12 right-12 z-50">
+    <div className="bg-(--primary-black) rounded-full fixed bottom-8 left-12 right-12 z-50">
       <div className="container max-w-lg mx-auto">
         <div className="flex items-center justify-between p-1">
           {navItems.map((item) => {
@@ -41,14 +41,14 @@ export function BottomNav() {
                 className={cn(
                   "relative  flex flex-col items-center gap-1 px-4 py-2 rounded-lg transition-fast",
                   isActive
-                    ? "text-(--color-brand-dark) p-4"
-                    : "text-(--layout-bg) hover:text-foreground"
+                    ? "text-(--primary-black) p-4"
+                    : "text-(--layout-color) hover:text-foreground"
                 )}
               >
                 {isActive && (
                   <motion.div
                     layoutId="bottom-nav-bg"
-                    className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-(--layout-bg) shadow-md shadow-(--color-brand-dark)/20"
+                    className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-(--layout-color) shadow-md shadow-(--primary-black)/20"
                     transition={{ type: "spring", stiffness: 500, damping: 40 }}
                   />
                 )}
